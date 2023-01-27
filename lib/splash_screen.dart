@@ -18,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     getValidationData().whenComplete(() async => Timer(
-          Duration(seconds: 2),
-          () => Navigator.push(
+          Duration(seconds: 4),
+          () => Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => Register())),
         ));
   }
@@ -30,62 +30,42 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // decoration: BoxDecoration(
-        //   gradient: RadialGradient(
-        //     center: Alignment.center,
-        //     colors: [Color.fromARGB(255, 221, 220, 220), Colors.blue],
-        //     stops: [0.9, 0.9],
-        //   ),
-        // ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
+            colors: const [
               Color.fromARGB(255, 242, 154, 103),
               Color.fromARGB(255, 129, 204, 204)
             ],
           ),
         ),
-
-        alignment: Alignment.center,
-        // color: Color(0xFF86198f),
-        // ignore: prefer_const_constructors
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            // Text(
-            //   "",
-            //   style: TextStyle(
-            //       color: Colors.white,
-            //       fontSize: 32,
-            //       fontWeight: FontWeight.bold),
-            // ),
-
-            Image(
-              image: AssetImage("assets/images/samaj.png"),
-              height: 100,
+            Padding(
+              padding: const EdgeInsets.only(top: 100.0),
+              child: Image(
+                image: AssetImage("assets/images/samaj.png"),
+                height: 450,
+                width: 300,
+                alignment: Alignment.center,
+              ),
             ),
-            //Image.asset('assets/images/samaj.png', fit: BoxFit.cover),
-
             Text(
               "WELCOME TO SAMAJ DARPAN",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-            ),
-            Text(
-              "Yuba Rahual Agrawal",
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.underline),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   width: 125,
                   height: 125,
                   child: Align(
-                      alignment: Alignment.topRight,
+                      alignment: Alignment.bottomCenter,
                       child: CircleAvatar(
                         radius: 60.0,
                         backgroundImage: AssetImage(
