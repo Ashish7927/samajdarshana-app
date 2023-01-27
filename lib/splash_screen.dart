@@ -41,54 +41,69 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 100.0),
-              child: Image(
-                image: AssetImage("assets/images/samaj.png"),
-                height: 450,
-                width: 300,
-                alignment: Alignment.center,
+              padding: EdgeInsets.only(top: 100.0),
+              child: Column(
+                children: const [
+                  Image(
+                    image: AssetImage("assets/images/samaj.png"),
+                    height: 450,
+                    width: 300,
+                    alignment: Alignment.center,
+                  ),
+                  Text(
+                    "WELCOME TO SAMAJ DARPAN",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      shadows: [
+                        Shadow(color: Colors.black, offset: Offset(0, -5))
+                      ],
+                      color: Colors.transparent,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.black,
+                      decorationThickness: 4,
+                      decorationStyle: TextDecorationStyle.solid,
+                    ),
+                  ),
+                ],
               ),
             ),
-            Text(
-              "WELCOME TO SAMAJ DARPAN",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
-                  decoration: TextDecoration.underline),
-            ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  width: 125,
-                  height: 125,
-                  child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: CircleAvatar(
-                        radius: 60.0,
-                        backgroundImage: AssetImage(
-                          "assets/images/yuvaadmin.png",
-                        ),
-                        backgroundColor: Colors.white,
-                      )),
+                Image(
+                  image: AssetImage("assets/images/yuvaadmin.png"),
+                  height: 200,
+                  width: 200,
+                  alignment: Alignment.bottomLeft,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("युवा राहुल अग्रवाल अध्यक्ष (2021-23) "),
-                    Text("मारवाड़ी युवा मंच, मोतिहारी"),
-                    Text("7277756056"),
-                    // Text(
-                    //   Provider.of<UserProfileProvider>(context,
-                    //           listen: true)
-                    //       .userName,
-                    //   style: const TextStyle(
-                    //       fontSize: sub_title,
-                    //       color: Color(subtitle_grey),
-                    //       fontWeight: FontWeight.w500),
-                    // )
+                  children: const [
+                    Text("युवा राहुल अग्रवाल",
+                        style: TextStyle(
+                          fontSize: 22.0,
+                          fontWeight: FontWeight.w800,
+                        )),
+                    Text("अध्यक्ष (2021-23)",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        )),
+                    Text("मारवाड़ी युवा मंच, मोतिहारी",
+                        style: TextStyle(
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.w700,
+                        )),
+                    Text("7277756056",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w600,
+                        )),
                   ],
                 )
               ],
