@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:heroicons/heroicons.dart';
 import 'package:samaj_darpana/Account/Screens/sidebar.dart';
 import 'package:samaj_darpana/Account/Screens/textcard.dart';
 
+import '../donation.dart';
 import 'blogs.dart';
 import 'home_slider.dart';
 
@@ -19,116 +19,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   drawer: const SidebarScreen(),
-    //   appBar: AppBar(
-    //     backgroundColor: Colors.yellow,
-    //     bottom: PreferredSize(
-    //         child: Padding(
-    //           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-    //           child: Row(
-    //             children: [
-    //               Container(
-    //                 width: 55,
-    //                 height: 55,
-    //                 // ignore: prefer_const_constructors
-    //                 // child: Align(
-    //                 //     alignment: Alignment.topRight,
-    //                 //     child: const SidebarScreen()),
-    //               ),
-    //               Padding(
-    //                 padding: const EdgeInsets.all(10.0),
-    //                 child: Column(
-    //                   crossAxisAlignment: CrossAxisAlignment.start,
-    //                   children: [
-    //                     Container(
-    //                       width: 55,
-    //                       height: 55,
-    //                       child: Align(
-    //                           alignment: Alignment.topRight,
-    //                           child: CircleAvatar(
-    //                             radius: 30.0,
-    //                             backgroundImage: AssetImage(
-    //                               "assets/images/sahitya.png",
-    //                             ),
-    //                             backgroundColor: Colors.white,
-    //                           )),
-    //                     ),
-    //                     // Container(
-    //                     //   child: Text(
-    //                     //     "Paula K",
-    //                     //     style: TextStyle(
-    //                     //         color: Colors.black,
-    //                     //         fontSize: 18,
-    //                     //         fontWeight: FontWeight.w900),
-    //                     //   ),
-    //                     // ),
-    //                   ],
-    //                 ),
-    //               ),
-    //               // Container(
-    //               //   decoration: BoxDecoration(
-    //               //     borderRadius: BorderRadius.circular(50),
-    //               //     color: Colors.grey,
-    //               //   ),
-    //               //   alignment: Alignment.center,
-    //               //   height: 43,
-    //               //   width: 43,
-    //               //   margin: EdgeInsets.only(top: 8, left: 100),
-    //               //   child: Stack(
-    //               //     // ignore: prefer_const_literals_to_create_immutables
-    //               //     children: [
-    //               //       GestureDetector(
-    //               //         onTap: () {
-    //               //           // Navigator.push(
-    //               //           //   context,
-    //               //           //   MaterialPageRoute(
-    //               //           //       builder: (context) => NotificationSceen()),
-    //               //           // );
-    //               //         },
-    //               //         child: HeroIcon(
-    //               //           HeroIcons.bell,
-    //               //           // color: Color(primary_color),
-    //               //           size: 22,
-    //               //         ),
-    //               //       ),
-    //               //     ],
-    //               //   ),
-    //               // ),
-    //             ],
-    //           ),
-    //         ),
-    //         preferredSize: Size.fromHeight(50.0)),
-    //   ),
-    //   body: Padding(
-    //     padding: const EdgeInsets.only(left: 15, right: 15),
-    //     child: SingleChildScrollView(
-    //       child: Column(
-    //         // ignore: prefer_const_literals_to_create_immutables
-    //         children: [
-    //           SizedBox(
-    //             height: 5,
-    //           ),
-    //           TextCard(),
-    //           SizedBox(
-    //             height: 6,
-    //           ),
-    //           SliderCarousel(),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
-    // return Scaffold(
-    //   drawer: const SidebarScreen(),
-    //   appBar: AppBar(
-    //     centerTitle: true,
-    //     title: const Text("Home Screen"),
-    //   ),
-    //   body: const Center(
-    //     child: Text('HOME SCREEN'),
-    //   ),
-    // );
     return Scaffold(
       // drawer: const SidebarScreen(),
       bottomNavigationBar: Container(
@@ -143,25 +33,16 @@ class _HomeState extends State<Home> {
           ],
         ),
         height: 70,
-        // child: const ClipRRect(
-        //   borderRadius: BorderRadius.only(
-        //     topRight: Radius.circular(20),
-        //     topLeft: Radius.circular(20),
-        //   ),
-        //   // child: Tabs(0)
-        // ),
       ),
       backgroundColor: Colors.white,
       // extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: false,
       extendBody: true,
-      // body: Consumer<CustomerDetailsProvider>(
-      //     builder: (context, customerDetailsdata, child) {
       body: NestedScrollView(
         floatHeaderSlivers: true,
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverPadding(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 0.0),
             sliver: SliverAppBar(
               elevation: 0,
               backgroundColor: Colors.yellow,
@@ -171,18 +52,18 @@ class _HomeState extends State<Home> {
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Padding(
-                      padding: EdgeInsets.only(top: 15, left: 25),
+                      padding: EdgeInsets.only(top: 15, left: 40),
                       child: Text(
                         "Samaj Darpan",
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 35,
                             fontWeight: FontWeight.w900,
                             color: Color.fromARGB(255, 16, 16, 15)),
                       )),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 10, left: 25),
+                    padding: EdgeInsets.only(bottom: 15, left: 40),
                     child: Text(
                       "समाज दर्पण",
                       style: TextStyle(
@@ -193,8 +74,8 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              leadingWidth: 80,
-
+              leadingWidth: 100,
+              toolbarHeight: 100.0,
               // ignore: unnecessary_new
               leading: Container(
                 margin: EdgeInsets.only(
@@ -215,39 +96,6 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              // actions: <Widget>[
-              //   Padding(
-              //     padding: const EdgeInsets.only(right: 20, top: 7),
-              //     child: Container(
-              //       decoration: BoxDecoration(
-              //           borderRadius: BorderRadius.circular(50),
-              //           color: Color(0xFFF2E3F4)),
-              //       alignment: Alignment.center,
-              //       height: 40,
-              //       width: 50,
-              //       child: Stack(
-              //           // ignore: prefer_const_literals_to_create_immutables
-              //           // children: [
-              //           //   GestureDetector(
-              //           //     onTap: () {
-              //           //       Navigator.push(
-              //           //         context,
-              //           //         MaterialPageRoute(
-              //           //             builder: (context) => NotificationSceen()),
-              //           //       );
-              //           //     },
-              //           //     child: HeroIcon(
-              //           //       HeroIcons.bell,
-              //           //       solid: true,
-              //           //       color: Color(primary_color),
-              //           //       size: icon_size,
-              //           //     ),
-              //           //   ),
-              //           // ],
-              //           ),
-              //     ),
-              //   ),
-              // ],
             ),
           )
         ],
@@ -261,12 +109,71 @@ class _HomeState extends State<Home> {
                   height: 1,
                 ),
                 TextCard(),
-                // SizedBox(
-                //   height: 1,
-                // ),
-                SliderCarousel(),
-                SizedBox(
-                  height: 1,
+                //SliderCarousel(),
+
+                Container(
+                  height: 100,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Container(
+                        width: 200,
+                        color: Colors.purple[600],
+                        child: const Center(
+                            child: Text(
+                          'Item 1',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        )),
+                      ),
+                      Container(
+                        width: 200,
+                        color: Colors.purple[500],
+                        child: const Center(
+                            child: Text(
+                          'Item 2',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        )),
+                      ),
+                      Container(
+                        width: 200,
+                        color: Colors.purple[400],
+                        child: const Center(
+                            child: Text(
+                          'Item 3',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        )),
+                      ),
+                      Container(
+                        width: 200,
+                        color: Colors.purple[300],
+                        child: const Center(
+                            child: Text(
+                          'Item 4',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        )),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Donation()));
+                    },
+                    //
+                    child: CircleAvatar(
+                      backgroundColor: Color.fromARGB(255, 124, 6, 6),
+                      radius: 60.0,
+                      child: CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/images/sahitya.png'),
+                        radius: 50.0,
+                      ),
+                    ),
+                  ),
                 ),
                 Blogs(),
               ],

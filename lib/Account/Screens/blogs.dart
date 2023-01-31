@@ -13,11 +13,11 @@ class _BlogState extends State<Blogs> {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        margin: EdgeInsets.all(20),
         child: Card(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Image.asset("assets/images/sahitya.png"),
+              Image.asset("assets/images/blog3.jpg"),
               Text("Your Title"),
               Text("This is the demo card design for blog card"),
             ],
@@ -25,7 +25,20 @@ class _BlogState extends State<Blogs> {
         ),
       ),
       Container(
-        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
+        child: Card(
+          child: Column(
+            children: <Widget>[
+              Image.asset("assets/images/blog3.jpg"),
+              Text("Your Title"),
+              Text("This is the demo card design for blog card"),
+              // SizedBox(height: 1)
+            ],
+          ),
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
         child: Card(
           child: Column(
             children: <Widget>[
@@ -38,20 +51,7 @@ class _BlogState extends State<Blogs> {
         ),
       ),
       Container(
-        margin: EdgeInsets.all(20),
-        child: Card(
-          child: Column(
-            children: <Widget>[
-              Image.asset("assets/images/sahitya.png"),
-              Text("Your Title"),
-              Text("This is the demo card design for blog card"),
-              // SizedBox(height: 1)
-            ],
-          ),
-        ),
-      ),
-      Container(
-        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
         child: Card(
           child: Column(
             children: <Widget>[

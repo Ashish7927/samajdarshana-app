@@ -28,34 +28,71 @@ class _SliderCarouselState extends State<SliderCarousel> {
         String slides = "${images[index]}";
         return Padding(
           padding: const EdgeInsets.only(top: 0),
-          child: Container(
-            margin: EdgeInsets.all(5),
-            // child: ClipRRect(
-            //   borderRadius: BorderRadius.circular(25),
-            //   // child: Image.network(images[index],
-            //   //     fit: BoxFit.cover, width: 1000)),
-            //   child: FadeInImage.assetNetwork(
-            //       height: 6,
-            //       placeholder: "assets/images/slider-loader.gif",
-            //       image: slides,
-            //       fit: BoxFit.cover,
-            //       width: 30),
-            // ),
-            child: Container(
-              height: 80,
-              width: 80,
-              child: CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 241, 148, 42),
-                radius: 250,
-                child: CircleAvatar(
-                  radius: 110,
-                  backgroundImage: NetworkImage(
-                    images[index],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: const Color(0xff7c94b6),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      images[index],
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  border: Border.all(
+                    color: Colors.yellow,
+                    width: 4.0,
                   ),
                 ),
               ),
-            ),
+              // SizedBox(width: 10),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: const Color(0xff7c94b6),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      images[index],
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  border: Border.all(
+                    color: Colors.yellow,
+                    width: 4.0,
+                  ),
+                ),
+              ),
+              // SizedBox(width: 10),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: const Color(0xff7c94b6),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      images[index],
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  border: Border.all(
+                    color: Colors.yellow,
+                    width: 4.0,
+                  ),
+                ),
+              ),
+            ],
+            
+            
           ),
+          
         );
       },
     );
