@@ -89,10 +89,7 @@ class _SliderCarouselState extends State<SliderCarousel> {
                 ),
               ),
             ],
-            
-            
           ),
-          
         );
       },
     );

@@ -109,72 +109,257 @@ class _HomeState extends State<Home> {
                   height: 1,
                 ),
                 TextCard(),
-                //SliderCarousel(),
+                // SliderCarousel(),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 120,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 17.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/diary.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Digital Diary'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/gallery.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Gallery'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/samaj.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Marwari Yuva manch'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/shakambhari.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Shakambhari'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/shyambaba.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Shyam Baba'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/dadiparivar.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Dadi Pariwar'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/upcoming.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Upcoming Event'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/sammelan.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Mahela Sameti'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/sahitya.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50.0)),
+                                  border: Border.all(
+                                    color: Colors.orangeAccent,
+                                    width: 5.0,
+                                  ),
+                                ),
+                              ),
+                              Text('Shristi Sakha'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      '•••',
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
 
                 Container(
                   height: 100,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: <Widget>[
-                      Container(
-                        width: 200,
-                        color: Colors.purple[600],
-                        child: const Center(
-                            child: Text(
-                          'Item 1',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        )),
-                      ),
-                      Container(
-                        width: 200,
-                        color: Colors.purple[500],
-                        child: const Center(
-                            child: Text(
-                          'Item 2',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        )),
-                      ),
-                      Container(
-                        width: 200,
-                        color: Colors.purple[400],
-                        child: const Center(
-                            child: Text(
-                          'Item 3',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        )),
-                      ),
-                      Container(
-                        width: 200,
-                        color: Colors.purple[300],
-                        child: const Center(
-                            child: Text(
-                          'Item 4',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        )),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
                   width: 100,
-                  height: 100,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Donation()));
-                    },
-                    //
-                    child: CircleAvatar(
-                      backgroundColor: Color.fromARGB(255, 124, 6, 6),
-                      radius: 60.0,
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/sahitya.png'),
-                        radius: 50.0,
-                      ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/donation.png'),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                    border: Border.all(
+                      color: Colors.orangeAccent,
+                      width: 5.0,
                     ),
                   ),
                 ),
+                Text('Donation'),
                 Blogs(),
               ],
             ),
